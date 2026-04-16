@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grounded Review PoC — Reports</title>
+<style>
+body {
+    font-family: -apple-system, 'Segoe UI', 'Noto Sans KR', sans-serif;
+    background: #0f172a; color: #e2e8f0;
+    margin: 0; padding: 40px; line-height: 1.6;
+}
+.container { max-width: 800px; margin: 0 auto; }
+h1 {
+    font-size: 28px;
+    background: linear-gradient(90deg, #60a5fa, #34d399);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.subtitle { color: #94a3b8; font-size: 14px; margin-bottom: 32px; }
+.card {
+    background: #1e293b; border: 1px solid #334155;
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 16px;
+    text-decoration: none; display: block; transition: border-color 0.2s;
+}
+.card:hover { border-color: #60a5fa; }
+.card h3 { color: #f1f5f9; margin: 0 0 6px 0; font-size: 16px; }
+.card p { color: #94a3b8; margin: 0; font-size: 13px; }
+.badge {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    margin-right: 6px;
+}
+.badge.independent { background: #3b82f6; color: white; }
+.badge.chain { background: #10b981; color: white; }
+.badge.backup { background: #f59e0b; color: white; }
+footer { text-align: center; color: #64748b; font-size: 11px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🎯 Grounded Review PoC</h1>
+<div class="subtitle">VLM (Gemini 3.1 Pro) + TRIBE (simulated) fusion — 3-mode comparison reports</div>
+
+<h2 style="color:#94a3b8; font-size:13px; text-transform:uppercase; letter-spacing:1px;">바닐라코 블러셔 릴스 (@모하뉴, 31s)</h2>
+
+<a class="card" href="report_real_reel_v1_backup.html">
+    <h3><span class="badge backup">Backup+Insights</span> 독립 모드 (인사이트 포함)</h3>
+    <p>ROI 설명 · 3-Layer 인사이트 · 2~6s 체인 비교 · 카테고리 수정 적용</p>
+</a>
+
+<a class="card" href="report_real_reel.html">
+    <h3><span class="badge independent">Independent</span> 독립 모드 (수정판)</h3>
+    <p>tribe_confirmed / m1_solo 카테고리 적용</p>
+</a>
+
+<a class="card" href="report_real_reel_chain.html">
+    <h3><span class="badge chain">Chain</span> 체인 모드 (M1→M3)</h3>
+    <p>M1 판단을 M3가 TRIBE로 검증/보정</p>
+</a>
+
+<h2 style="color:#94a3b8; font-size:13px; text-transform:uppercase; letter-spacing:1px; margin-top:32px;">바닐라코 쿠션 릴스 (@끌리진아, 43s)</h2>
+
+<a class="card" href="report_real_cushion.html">
+    <h3><span class="badge independent">Independent</span> 독립 모드</h3>
+    <p>m1_miss 2건 (17~23s 도포 피로) · m1_overflag 1건 (36~43s)</p>
+</a>
+
+<a class="card" href="report_real_cushion_chain.html">
+    <h3><span class="badge chain">Chain+Insights</span> 체인 모드 (인사이트 포함)</h3>
+    <p>m1_overflag 0건 · M1 판단 양립 처리 · 3-Layer 인사이트</p>
+</a>
+
+<footer>
+grounded_review_poc · Gemini 3.1 Pro + TRIBE v2 (simulated) · 2026-04-16
+</footer>
+</div>
+</body>
+</html>
